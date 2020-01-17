@@ -12,10 +12,8 @@
     <img src="2.png" width=500>
 </p>
 
-<img src="3.png" align="right" width=200>
+<img src="3.png" align="right" width=150>
 
-<br>
-<br>
 <br>
 <br>
 
@@ -26,11 +24,15 @@
 <br>
 <br>
 
-<img src="5.png" align="right" width=200>
+<img src="5.png" align="right" width=150>
+
+<br>
+<br>
+
+**In more general case the equation of the boundary line will be <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;b&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;b&space;=&space;0" title="w_{1}x_{1} + w_{2}x_{2} + b = 0" /></a> and to summarize it more, we will have <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;=&space;0" title="WX + b = 0" /></a> which <a href="https://www.codecogs.com/eqnedit.php?latex=W" target="_blank"><img src="https://latex.codecogs.com/png.latex?W" title="W" /></a> is a vector of <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1},&space;w_{2}" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1},&space;w_{2}" title="w_{1}, w_{2}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=X" target="_blank"><img src="https://latex.codecogs.com/png.latex?X" title="X" /></a> is a vector of <a href="https://www.codecogs.com/eqnedit.php?latex=x_{1},&space;x_{2}" target="_blank"><img src="https://latex.codecogs.com/png.latex?x_{1},&space;x_{2}" title="x_{1}, x_{2}" /></a> and  <a href="https://www.codecogs.com/eqnedit.php?latex=y" target="_blank"><img src="https://latex.codecogs.com/png.latex?y" title="y" /></a> is a label of 0 or 1. The prediction variable <a href="https://www.codecogs.com/eqnedit.php?latex=y\hat{}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\hat{y}" title="y\hat{}" /></a> which will be 1 if <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;\geq&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;\geq&space;0" title="WX + b \geq 0" /></a> which will be above the line and will be 0 if <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;<&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;<&space;0" title="WX + b < 0" /></a> which will be below the line.**
 
 <br>
 <br>
 <br>
 <br>
 
-**In more general case the equation of the boundary line will be <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;b&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;b&space;=&space;0" title="w_{1}x_{1} + w_{2}x_{2} + b = 0" /></a> and to summarize it more, we will have <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;=&space;0" title="WX + b = 0" /></a> which <a href="https://www.codecogs.com/eqnedit.php?latex=W" target="_blank"><img src="https://latex.codecogs.com/png.latex?W" title="W" /></a> is a vector of <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1},&space;w_{2}" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1},&space;w_{2}" title="w_{1}, w_{2}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=X" target="_blank"><img src="https://latex.codecogs.com/png.latex?X" title="X" /></a> is a vector of <a href="https://www.codecogs.com/eqnedit.php?latex=x_{1},&space;x_{2}" target="_blank"><img src="https://latex.codecogs.com/png.latex?x_{1},&space;x_{2}" title="x_{1}, x_{2}" /></a> and  <a href="https://www.codecogs.com/eqnedit.php?latex=y" target="_blank"><img src="https://latex.codecogs.com/png.latex?y" title="y" /></a> is a label of 0 or 1**
