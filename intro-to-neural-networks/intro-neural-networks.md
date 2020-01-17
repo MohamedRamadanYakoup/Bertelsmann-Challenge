@@ -3,16 +3,16 @@
 **When we have a system for acceptance of students at a university and most people who get 9 in test and 8 in grades more likely to get accepted but who get 3 in test and 4 in grades are more likely not to be accepted, so I we have a student who gets 7 in test and 6 in grades, will he be accepted or not?**
 
 <p align="center">
-    <img src="1.png" width=500>
+    <img src="imgs/1.png" width=500>
 </p>
 
 **we could say from the data above that the student will be accepted because he falls at the area of accepted students. We can clarify it more by setting a line which seperates the students who got accepted or not accepted like below**
 
 <p align="center">
-    <img src="2.png" width=500>
+    <img src="imgs/2.png" width=500>
 </p>
 
-<img src="3.png" align="right" width=150>
+<img src="imgs/3.png" align="right" width=150>
 
 <br>
 <br>
@@ -24,7 +24,7 @@
 <br>
 <br>
 
-<img src="5.png" align="right" width=150>
+<img src="imgs/4.png" align="right" width=150>
 
 <br>
 <br>
