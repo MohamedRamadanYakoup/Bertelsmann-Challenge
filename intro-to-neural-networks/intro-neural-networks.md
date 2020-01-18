@@ -1,4 +1,52 @@
-# Classification
+# Introduction to Neural Networks
+
+### Table of Contents of Lesson 3
+
+* 3.1 [Introduction](#intorduction)
+* 3.2 [Classification Problems 1](#classification-problems-1)
+* 3.3 [Classification Problems 2](#classification-problems-2)
+* 3.4 [Linear Boundaries](#linear-boundaries)
+
+---
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+## Introduction
+
+* ### **What is Deep Learning?, What is it used for?**
+    - #### Deep Learning is subfield of machine learning concerned with algorithms inspired by the structure and function of the brain called Artificail Neural Networks.
+    - #### It has many applications such as:
+        - beating Humans in games such as Go or jeopardy
+        - Detecting spam in emails
+        - forcasting stock prices
+        - recognizig images in pictures
+        - diagnosing illnesses sometimes with more percision than doctors
+        - self-driving cars
+
+<img src="imgs/5.png" align="right" width=150>
+
+* ### **Neural Networks**
+    - It vaguely mimic the process of how the brain operates, with neurons that fire bits of information.
 
 **When we have a system for acceptance of students at a university and most people who get 9 in test and 8 in grades more likely to get accepted but who get 3 in test and 4 in grades are more likely not to be accepted, so I we have a student who gets 7 in test and 6 in grades, will he be accepted or not?**
 
@@ -35,4 +83,3 @@
 <br>
 <br>
 <br>
-
