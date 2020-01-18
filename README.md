@@ -1,2 +1,2 @@
 # Bertelsmann-Challenge
-This for the work and summary of Bertelsmann Challenge
+This repo for projects and summaries of Bertelsmann Challenge
