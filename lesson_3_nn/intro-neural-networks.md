@@ -7,6 +7,7 @@
 * [3.3 Classification Problems 2](#3.3-classification-problems-2)
 * [3.4 Linear Boundaries](#3.4-linear-boundaries)
 * [3.5 Higher Dimensions](#3.5-higher-dimensions)
+* [3.6 Perceptrons](#3.6-perceptrons)
 ---
 
 ## 3.1 Introduction
@@ -90,3 +91,26 @@
 <img src="imgs/10.png" width=150 align="right">
 
 **But what if we have n dimensional space <a href="https://www.codecogs.com/eqnedit.php?latex=x_{1},&space;x_{2},....,&space;x_{n}" target="_blank"><img src="https://latex.codecogs.com/png.latex?x_{1},&space;x_{2},....,&space;x_{n}" title="x_{1}, x_{2},...., x_{n}" /></a>, We will have n dimensional hyperplane and the equation will be <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;w_{3}x_{3}&space;&plus;&space;b&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;w_{n}x_{n}&space;&plus;&space;b&space;=&space;0" title="w_{1}x_{1} + w_{2}x_{2} + w_{n}x_{n} + b = 0" /></a> but it still could be abreviated with <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;=&space;0" title="WX + b = 0" /></a> but instead the vector <a href="https://www.codecogs.com/eqnedit.php?latex=\vec{W}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\vec{W}" title="\vec{W}" /></a> will include <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1},&space;w_{2},....,&space;w_{n}" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1},&space;w_{2},....,&space;w_{n}" title="w_{1}, w_{2},...., w_{n}" /></a> and the vector <a href="https://www.codecogs.com/eqnedit.php?latex=\vec{X}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\vec{X}" title="\vec{X}" /></a> will include <a href="https://www.codecogs.com/eqnedit.php?latex=x_{1},&space;x_{2},....,&space;x_{n}" target="_blank"><img src="https://latex.codecogs.com/png.latex?x_{1},&space;x_{2},....,&space;x_{n}" title="x_{1}, x_{2},...., x_{n}" /></a> and the predction will still <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}\begin{cases}&space;&&space;1&space;\text{&space;if&space;}&space;WX&space;&plus;&space;b&space;\geq&space;0&space;\\&space;&&space;0&space;\text{&space;if&space;}&space;WX&space;&plus;&space;b&space;<&space;0&space;\end{cases}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\hat{y}\begin{cases}&space;&&space;1&space;\text{&space;if&space;}&space;WX&space;&plus;&space;b&space;\geq&space;0&space;\\&space;&&space;0&space;\text{&space;if&space;}&space;WX&space;&plus;&space;b&space;<&space;0&space;\end{cases}" title="\hat{y}\begin{cases} & 1 \text{ if } WX + b \geq 0 \\ & 0 \text{ if } WX + b < 0 \end{cases}" /></a>**
+
+## 3.6 Perceptrons
+
+**It's a neural network unit which make some computations on the data to extract features from it**
+
+<p align="center">
+    <img src="imgs/12.png" width=500>
+</p>
+
+**As we see in the above graph, we input the data to the perceptron unit to evaluate the inputs and classify if it belongs to accepted or rejected area and we use the score fuction <a href="https://www.codecogs.com/eqnedit.php?latex=2*Test&space;&plus;&space;1*Grades&space;-&space;18" target="_blank"><img src="https://latex.codecogs.com/png.latex?2*Test&space;&plus;&space;1*Grades&space;-&space;18" title="2*Test + 1*Grades - 18" /></a> to determine that if <a href="https://www.codecogs.com/eqnedit.php?latex=Score&space;\geq&space;0&space;Accepted" target="_blank"><img src="https://latex.codecogs.com/png.latex?Score&space;\geq&space;0&space;" title="Score \geq 0 Accepted" /></a> Accepted and if <a href="https://www.codecogs.com/eqnedit.php?latex=Score&space;<&space;0&space;Rejected" target="_blank"><img src="https://latex.codecogs.com/png.latex?Score&space;<&space;0&space;" title="Score < 0 Rejected" /></a> Rejected.**
+
+
+**But in the General Case the node will have an input values <a href="https://www.codecogs.com/eqnedit.php?latex=x_{1},&space;x_{2},....,&space;x_{n}" target="_blank"><img src="https://latex.codecogs.com/png.latex?x_{1},&space;x_{2},....,&space;x_{n}" title="x_{1}, x_{2},...., x_{n}" /></a> and 1 and edges with wieghts <a href="https://www.codecogs.com/eqnedit.php?latex=w_{1},&space;w_{2},....,&space;w_{n}" target="_blank"><img src="https://latex.codecogs.com/png.latex?w_{1},&space;w_{2},....,&space;w_{n}" title="w_{1}, w_{2},...., w_{n}" /></a> and b corresponding for bais unit then the node will calculate the linear euqation <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;=&space;\sum_{i=1}^{n}&space;W_{i}X_{i}&space;&plus;&space;b" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;=&space;\sum_{i=1}^{n}&space;W_{i}X_{i}&space;&plus;&space;b" title="WX + b = \sum_{i=1}^{n} W_{i}X_{i} + b" /></a> then it checks if <a href="https://www.codecogs.com/eqnedit.php?latex=WX&space;&plus;&space;b&space;\geq&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?WX&space;&plus;&space;b&space;\geq&space;0" title="WX + b \geq 0" /></a> if it is, then the node returns a value of one for yes and if not then it returns a value of zero for no.**
+
+<p align="center">
+    <img src="imgs/13.png" width=500>
+</p>
+
+**The step of evaluation whether it 's 0 or 1, It's called "Step Function" which returns <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\begin{cases}&space;&&space;1&space;\text{&space;if&space;}&space;x&space;\geq&space;0&space;\\&space;&&space;0&space;\text{&space;if&space;}&space;x&space;<&space;0&space;\end{cases}" target="_blank"><img src="https://latex.codecogs.com/png.latex?y&space;=&space;\begin{cases}&space;&&space;1&space;\text{&space;if&space;}&space;x&space;\geq&space;0&space;\\&space;&&space;0&space;\text{&space;if&space;}&space;x&space;<&space;0&space;\end{cases}" title="y = \begin{cases} & 1 \text{ if } x \geq 0 \\ & 0 \text{ if } x < 0 \end{cases}" /></a>, so we could say that those perceptrons are a combination of nodes the first one as a "Linear Function" and the second on is a "Step Function"**
+
+<p align="center">
+    <img src="imgs/14.png" width=500>
+</p>
