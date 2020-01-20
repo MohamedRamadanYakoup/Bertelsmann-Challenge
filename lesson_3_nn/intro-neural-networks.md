@@ -142,6 +142,7 @@
 <br> <br>
     - **To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the two inputs are 1**
 <br> <br> <br>
+
 ```python
 import pandas as pd
 
@@ -173,6 +174,7 @@ else:
     print('You got {} wrong.  Keep trying!\n'.format(num_wrong))
 print(output_frame.to_string(index=False))
 ```
+
 ```python
 Nice!  You got it all correct.
 
@@ -182,6 +184,7 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
       1          0                  -1.0                    0          Yes
       1          1                   0.0                    1          Yes
 ```
+
 <br> <br> <br>
 <img src="imgs/3_19.png" width=150 align="right">
 
@@ -192,6 +195,7 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
 <br> <br>
     - **To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the one of inputs are 1**
 <br> <br> <br>
+
 ```python
 import pandas as pd
 
