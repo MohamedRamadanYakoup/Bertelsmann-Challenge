@@ -133,17 +133,14 @@
 
 ## 3.8 Perceptrons as Logical Operators
 
-<img src="imgs/3_17.png" align="right" width=150>
+- ### AND Perceptron
 
-- ### AND Operator
-    - **It takes 2 inputs and evaluates to true when the 2 inputs are True**
-<br> <br> <br> <br> <br>
-<img src="imgs/3_18.png" width=150 align="right">
-<br> <br>
+    - **It takes 2 inputs and evaluates to true when the 2 inputs are True and To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the two inputs are 1**
 
-- **To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the two inputs are 1** 
-
-<br> <br> <br>
+<p align="center">
+    <img src="imgs/3_17.png" width=200>
+    <img src="imgs/3_18.png" width=200 >
+</p>
 
 ```python
 import pandas as pd
@@ -187,17 +184,14 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
       1          1                   0.0                    1          Yes
 ```
 
-<br> <br> <br>
-<img src="imgs/3_19.png" width=150 align="right">
+- ### OR Perceptron
 
-- ### OR Operators
-    - **It takes 2 inputs and evaluates to True when one of the inputs is True.**
-<br> <br> <br> <br> <br>
-<img src="imgs/3_20.png" width=150 align="right">
-<br> <br>
+    - **It takes 2 inputs and evaluates to True when one of the inputs is True and To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the one of inputs are 1**
 
-- **To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the one of inputs are 1**
-<br> <br> <br>
+<p align="center">
+    <img src="imgs/3_19.png" width=200>
+    <img src="imgs/3_20.png" width=200>
+</p>
 
 ```python
 import pandas as pd
@@ -240,3 +234,58 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
       1          0                   1.0                    1          Yes
       1          1                   3.0                    1          Yes
 ```
+
+- ### NOT Perceptron
+
+    - **Unlike other operators we looked at, the NOT operation only cares about one input. the operation returns a 0 if the input is 1 and a 1 if the input is 0. The other inputs to perceptron are ignored**
+
+```python
+import pandas as pd
+
+# TODO: Set weight1, weight2, and bias
+weight1 = 1.0
+weight2 = -2.0
+bias = 0.0
+
+
+# DON'T CHANGE ANYTHING BELOW
+# Inputs and outputs
+test_inputs = [(0, 0), (0, 1), (1, 0), (1, 1)]
+correct_outputs = [True, False, True, False]
+outputs = []
+
+# Generate and check output
+for test_input, correct_output in zip(test_inputs, correct_outputs):
+    linear_combination = weight1 * test_input[0] + weight2 * test_input[1] + bias
+    output = int(linear_combination >= 0)
+    is_correct_string = 'Yes' if output == correct_output else 'No'
+    outputs.append([test_input[0], test_input[1], linear_combination, output, is_correct_string])
+
+# Print output
+num_wrong = len([output[4] for output in outputs if output[4] == 'No'])
+output_frame = pd.DataFrame(outputs, columns=['Input 1', '  Input 2', '  Linear Combination', '  Activation Output', '  Is Correct'])
+if not num_wrong:
+    print('Nice!  You got it all correct.\n')
+else:
+    print('You got {} wrong.  Keep trying!\n'.format(num_wrong))
+print(output_frame.to_string(index=False))
+```
+
+```python
+Nice!  You got it all correct.
+
+Input 1    Input 2    Linear Combination    Activation Output   Is Correct
+      0          0                   0.0                    1          Yes
+      0          1                  -2.0                    0          Yes
+      1          0                   1.0                    1          Yes
+      1          1                  -1.0                    0          Yes
+```
+
+- ### XOR Perceptron
+
+    - **It's a multilayer perceptron which takes 2 inputs to the first layer which consists of AND, NOT and OR then feed the results to AND perceptron to get XOR perceptron.**
+
+<p align="center">
+    <img src="imgs/3_21.png" width="300">
+    <img src="imgs/3_22.png" width="300">
+</p>
