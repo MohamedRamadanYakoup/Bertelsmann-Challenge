@@ -195,7 +195,8 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
 <br> <br> <br> <br> <br>
 <img src="imgs/3_20.png" width=150 align="right">
 <br> <br>
-    - **To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the one of inputs are 1**
+
+- **To apply these into perceptron we draw a table of zeros and ones where negative area corresponds to red and positive to blue and it evaluates to 1 when the one of inputs are 1**
 <br> <br> <br>
 
 ```python
