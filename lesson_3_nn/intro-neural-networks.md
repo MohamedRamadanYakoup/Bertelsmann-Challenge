@@ -141,7 +141,7 @@
 
 <p align="center">
     <img src="imgs/3_17.png" width=200>
-    <img src="imgs/3_18.png" width=200 >
+    <img src="imgs/3_18.png" width=200 height=198>
 </p>
 
 ```python
@@ -192,7 +192,7 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
 
 <p align="center">
     <img src="imgs/3_19.png" width=200>
-    <img src="imgs/3_20.png" width=200>
+    <img src="imgs/3_20.png" width=200 height=200>
 </p>
 
 ```python
@@ -289,7 +289,7 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
 
 <p align="center">
     <img src="imgs/3_21.png" width="300">
-    <img src="imgs/3_22.png" width="300">
+    <img src="imgs/3_22.png" width="300" height=142>
 </p>
 
 ## 3.9 Perceptron Trick
@@ -301,15 +301,24 @@ Input 1    Input 2    Linear Combination    Activation Output   Is Correct
 **If we have a line with function <a href="https://www.codecogs.com/eqnedit.php?latex=2.6x_{1}&space;&plus;&space;4x_{2}&space;-&space;10&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?2.6x_{1}&space;&plus;&space;4x_{2}&space;-&space;10&space;=&space;0" title="2.6x_{1} + 4x_{2} - 10 = 0" /></a> and a point in coordinates <a href="https://www.codecogs.com/eqnedit.php?latex=(4,5)" target="_blank"><img src="https://latex.codecogs.com/png.latex?(4,5)" title="(4,5)" /></a> and the point in the positive area which is misclassified and should be in the negative area, so we need to make the line near from the point without misclassified the other points, if <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;3&space;&&space;4&space;&&space;-10\\&space;-&space;&&space;&&space;\\&space;4&space;&&space;5&space;&&space;1&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;3&space;&&space;4&space;&&space;-10\\&space;-&space;&&space;&&space;\\&space;4&space;&&space;5&space;&&space;1&space;\end{matrix}" title="\begin{matrix} 3 & 4 & -10\\ - & & \\ 4 & 5 & 1 \end{matrix}" /></a> we will have <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;-1&space;&&space;-1&space;&&space;-11&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;-1&space;&&space;-1&space;&&space;-11&space;\end{matrix}" title="\begin{matrix} -1 & -1 & -11 \end{matrix}" /></a> which will make the line shift aggressively and we could misclassify the other points, so we could use what's called learning rate (0.1) which will help the line move short steps towards the point <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;3&space;&&space;4&space;&&space;-10\\&space;-&space;&&space;&&space;\\&space;4*0.1&space;&&space;5*0.1&space;&&space;1*0.1&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;3&space;&&space;4&space;&&space;-10\\&space;-&space;&&space;&&space;\\&space;4*0.1&space;&&space;5*0.1&space;&&space;1*0.1&space;\end{matrix}" title="\begin{matrix} 3 & 4 & -10\\ - & & \\ 4*0.1 & 5*0.1 & 1*0.1 \end{matrix}" /></a> and we will get a new line <a href="https://www.codecogs.com/eqnedit.php?latex=2.6x_{1}&space;&plus;&space;3.5x_{2}&space;-&space;10.1&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/png.latex?2.6x_{1}&space;&plus;&space;3.5x_{2}&space;-&space;10.1&space;=&space;0" title="2.6x_{1} + 3.5x_{2} - 10.1 = 0" /></a> and we do the same steps if the point was in the negative area but we will add the points not subtract them.**
 
 <p align="center">
-<img src="imgs/3_25.png" width=300>
+<img src="imgs/3_25.png" width=300 height=266>
 <img src="imgs/3_26.png" width=200>
 </p>
 
 ## 3.10 Perceptron Algorithm
+
+<img src="imgs/3-27.jpg" width=200 height=230 align="right">
 
 ```python
 1. Start with random weights: w1,..., wn, b
 2. For Every misclassified point(x1,...., xn):
     2.1 If the prediction = 0
         - For i = 1...n
+            - change w_i + alpha*x_i
+        change b to b + alpha
+
+    2.2 If the prediction = 1
+        - For i = 1....n
+            -change w_i - alpha*x_i
+        -change b to b - alpha
 ```
