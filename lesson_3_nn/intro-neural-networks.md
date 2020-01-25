@@ -13,6 +13,9 @@
 * [3.9 Perceptron Trick](#3.9-perceptron-trick)
 * [3.10 Perceptron Algorithm](#3.10-perceptron-algorithm)
 * [3.11 Non Linear Regions](#3.11-non-linear-regions)
+* [3.12 Error Functions](#3.12-error-functions)
+* [3.13 Log-loss Error Function](#3.13-log-loss-error-function)
+* [3.14 Discrete vs Continous](#3.14-discrete-vs-continous)
 ---
 
 ## 3.1 Introduction
@@ -379,7 +382,6 @@ def trainPerceptronAlgorithm(X, y, learn_rate = 0.01, num_epochs = 25):
     return boundary_lines
 ```
 
-
 ## 3.11 Non Linear Regions
 
 **Let's say that we have a student who get 9 on test and 1 on grades that mean according to that model he should be in the accepted area.**
@@ -398,4 +400,57 @@ def trainPerceptronAlgorithm(X, y, learn_rate = 0.01, num_epochs = 25):
 
 <p align="center">
     <img src="imgs/3_28.png" width=500>
+</p>
+
+## 3.12 Error Functions
+
+**The Error function is used to decrease the distance between function and the target**
+
+<p align="center">
+    <img src="imgs/3_31.png" width=500>
+</p>
+
+## 3.13 Log-loss Error Function
+
+**We use these error functions to decrease the error to reach the best minimum or the global minimum which will help the function to do well on the data and get the nearest right results**
+
+<p align="center">
+    <img src="imgs/3_32.png" width=500>
+</p>
+
+**We take so tiny steps to decrease the error and the reason for that is calculus ,because we take the derivatives to calculate it. But when we use tiny steps we cannot go further.**
+
+<p align="center">
+    <img src="imgs/3_33.png" width=500>
+</p>
+
+**If we try to descend from Aztec pyramid with flat steps, when we look at every dimention we found out that we cannot go down and get confused. But with mount Errorest when we look in every dimension we find very small variation in height and we can detect in what direction we can decrease the most.**
+
+<p align="center">
+    <img src="imgs/3_34.png" width=500>
+</p>
+
+> ### Gradient Descent Terms:-
+- The values should be continous.
+- Error Function should differentiable.
+
+## 3.14 Discrete vs Continous
+
+**The predictions of disceret values will be 0,1 but for continous values will be probability as long as the probability is high it means the values in the positive area and if it low means in negative area.**
+
+<p align="center">
+    <img src="imgs/3_35.png" width=500>
+</p>
+
+**So to move from disceret predictions to continous, change the activation function from "Step Function" to "Sigmoid Function"**
+
+<p align="center">
+    <img src="imgs/3_36.png" width=300>
+    <img src="imgs/3_37.png" width=300 height=131>
+</p>
+
+**We apply this to Neural Networks by changing the perceptron of "Step Function" to "Sigmoid Function" as New Activation Function.**
+
+<p align="center">
+    <img src="imgs/3_38.png" width=500>
 </p>
