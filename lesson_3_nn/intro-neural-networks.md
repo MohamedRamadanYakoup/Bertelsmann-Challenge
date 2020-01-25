@@ -387,19 +387,19 @@ def trainPerceptronAlgorithm(X, y, learn_rate = 0.01, num_epochs = 25):
 **Let's say that we have a student who get 9 on test and 1 on grades that mean according to that model he should be in the accepted area.**
 
 <p align="center">
-    <img src="imgs/3_29.png" width=500>
+    <img src="imgs/3_29.PNG" width=500>
 </p>
 
 **But that's wont be reasonable because he should what ever he got in the test if the grade is low, he should,'t be accepted, so the data should be more like that**
 
 <p align="center">
-    <img src="imgs/3_30.png" width=500>
+    <img src="imgs/3_30.PNG" width=500>
 </p>
 
 **But now the data cannot be separated by a line, we need more complexity to fit that data. we might fit the data with the curve and that's mean the perceptron algorithm won't work this time and we need to redefine our perceptron algorithm in away that it will generalize to other types of curves**
 
 <p align="center">
-    <img src="imgs/3_28.png" width=500>
+    <img src="imgs/3_28.PNG" width=500>
 </p>
 
 ## 3.12 Error Functions
