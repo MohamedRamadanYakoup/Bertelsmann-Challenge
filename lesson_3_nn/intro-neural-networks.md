@@ -454,3 +454,5 @@ def trainPerceptronAlgorithm(X, y, learn_rate = 0.01, num_epochs = 25):
 <p align="center">
     <img src="imgs/3_38.png" width=500>
 </p>
+
+****
