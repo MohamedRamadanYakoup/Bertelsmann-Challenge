@@ -16,6 +16,10 @@
 * [3.12 Error Functions](#3.12-error-functions)
 * [3.13 Log-loss Error Function](#3.13-log-loss-error-function)
 * [3.14 Discrete vs Continous](#3.14-discrete-vs-continous)
+* [3.15 Softmax](#3.15-softmax)
+* [3.16 One Hot Encoding](#3.16-one-hot-encoding)
+* [3.17 Maximum Likelihood](#3.17-maximum-likelihood)
+* [3.18 Maximizing Probabilities](#3.18-Maximizing-Probabilities)
 ---
 
 ## 3.1 Introduction
@@ -455,4 +459,80 @@ def trainPerceptronAlgorithm(X, y, learn_rate = 0.01, num_epochs = 25):
     <img src="imgs/3_38.png" width=500>
 </p>
 
-****
+## 3.15 Softmax
+
+**If we have man classes of animal which have the probability p(duck) = 0.67, p(beaver) = 0.24, and p(walrus) = 0.09 "To be noted that the probability should be add to one."**
+
+<p align="center">
+    <img src="imgs/3_39.png" width=500>
+</p>
+
+**We have a linear model which based on some inputs such as (Does it have beak or not?, Number of teeth, Number of feathers, Hair, No Hair, Does it live in the water or fly?), so the model give us scores 2 for duck, 1 for beaver, and 0 for walrus.**
+
+<p align="center">
+    <img src="imgs/3_40.png" width=500>
+</p>
+
+### Conditions to satisfy probability:
+
+* The probabilities they need to add to one.
+* Probability of classes should be rational to their numbers.
+* If we use regural way to get the probability we could divide by 0 or negative numbers which isn't right, so we use (exponential) function to
+the positive values which will help us get the probability
+
+<p align="center">
+    <img src="imgs/3_41.png" width=500>
+</p>
+
+### Softmax Function:
+
+<img src="imgs/3_42.png" width=200 align="right">
+
+<br>
+<br>
+
+- It's a linear function which help to get the probability of many classification problem.
+
+<br>
+<br>
+
+```python
+import numpy as np
+
+def softmax(L):
+    return np.exp(L)/np.sum([np.exp(i) for i in L])
+```
+
+```python
+Trying for L=[5,6,7].
+The correct answer is
+[0.09003057317038046, 0.24472847105479764, 0.6652409557748219]
+And your code returned
+[0.09003057 0.24472847 0.66524096]
+
+Correct!
+```
+
+## 3.16 One Hot Encoding
+
+**It's a process where we convert data to numerical to input it to the model**
+
+<p align="center">
+    <img src="imgs/3_43.png" width=500>
+</p>
+
+## 3.17 Maximum Likelihood
+
+**It's a method which pick the model that gives the existing  labels the highest probability. And we can apply that by summing all the probability of each model and see which one is higher and that's mean it's perfroming better.**
+
+<p align="center">
+    <img src="imgs/3_44.png" width=500>
+</p>
+
+## 3.18 Maximizing Probabilities
+
+**We need to maximize probabilities because we need to make our model to perform better, so we change the products of the probabilities to Sums that's why we use Log function to converts to sums.**
+
+<p align="center">
+    <img src="imgs/3_45.png" width=500>
+</p>
