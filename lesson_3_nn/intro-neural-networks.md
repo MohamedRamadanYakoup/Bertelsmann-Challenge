@@ -20,6 +20,8 @@
 * [3.16 One Hot Encoding](#3.16-one-hot-encoding)
 * [3.17 Maximum Likelihood](#3.17-maximum-likelihood)
 * [3.18 Maximizing Probabilities](#3.18-Maximizing-Probabilities)
+* [3.19 Cross Entropy 1](#3.19-cross-entropy-1)
+* [3.20 Cross Entropy 2](#3.20-cross-entropy-2)
 ---
 
 ## 3.1 Introduction
@@ -536,3 +538,54 @@ Correct!
 <p align="center">
     <img src="imgs/3_45.png" width=500>
 </p>
+
+## 3.19 Cross Entropy 1
+
+**To change the product of the probabilities to sums, we use the natural logarithm of the probabilities <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;0.6&space;&&space;*&space;&&space;0.2&space;&&space;*&space;&&space;0.1&space;&&space;*&space;&&space;0.7&space;&&space;=&space;&&space;0.0084&space;\\&space;\ln(0.6)&space;&&space;&plus;&space;&&space;\ln(0.2)&space;&&space;&plus;&space;&&space;\ln(0.1)&space;&&space;&plus;&space;&&space;\ln(0.7)&space;&&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;0.6&space;&&space;*&space;&&space;0.2&space;&&space;*&space;&&space;0.1&space;&&space;*&space;&&space;0.7&space;&&space;=&space;&&space;0.0084&space;\\&space;\ln(0.6)&space;&&space;&plus;&space;&&space;\ln(0.2)&space;&&space;&plus;&space;&&space;\ln(0.1)&space;&&space;&plus;&space;&&space;\ln(0.7)&space;&&space;\end{matrix}" title="\begin{matrix} 0.6 & * & 0.2 & * & 0.1 & * & 0.7 & = & 0.0084 \\ \ln(0.6) & + & \ln(0.2) & + & \ln(0.1) & + & \ln(0.7) & \end{matrix}" /></a> & <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;0.7&space;&&space;*&space;&&space;0.9&space;&&space;*&space;&&space;0.8&space;&&space;*&space;&&space;0.6&space;&&space;=&space;&&space;0.3024&space;\\&space;\ln(0.7)&space;&&space;&plus;&space;&&space;\ln(0.9)&space;&&space;&plus;&space;&&space;\ln(0.8)&space;&&space;&plus;&space;&&space;\ln(0.6)&space;&&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;0.7&space;&&space;*&space;&&space;0.9&space;&&space;*&space;&&space;0.8&space;&&space;*&space;&&space;0.6&space;&&space;=&space;&&space;0.3024&space;\\&space;\ln(0.7)&space;&&space;&plus;&space;&&space;\ln(0.9)&space;&&space;&plus;&space;&&space;\ln(0.8)&space;&&space;&plus;&space;&&space;\ln(0.6)&space;&&space;\end{matrix}" title="\begin{matrix} 0.7 & * & 0.9 & * & 0.8 & * & 0.6 & = & 0.3024 \\ \ln(0.7) & + & \ln(0.9) & + & \ln(0.8) & + & \ln(0.6) & \end{matrix}" /></a> but that will give us a negative results which we don't want. To get the positive numbers we will get the negative logarithm of probabilities which called "Cross Entropy" <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;-\ln(0.7)&space;&&space;-&space;&&space;\ln(0.9)&space;&&space;-&space;&&space;\ln(0.8)&space;&&space;-&space;&&space;\ln(0.6)&&space;=&space;&&space;1.2&space;\\&space;0.36&space;&&space;&&space;0.1&space;&&space;&&space;0.22&space;&&space;&&space;0.51&space;&&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;-\ln(0.7)&space;&&space;-&space;&&space;\ln(0.9)&space;&&space;-&space;&&space;\ln(0.8)&space;&&space;-&space;&&space;\ln(0.6)&&space;=&space;&&space;1.2&space;\\&space;0.36&space;&&space;&&space;0.1&space;&&space;&&space;0.22&space;&&space;&&space;0.51&space;&&space;\end{matrix}" title="\begin{matrix} -\ln(0.7) & - & \ln(0.9) & - & \ln(0.8) & - & \ln(0.6)& = & 1.2 \\ 0.36 & & 0.1 & & 0.22 & & 0.51 & \end{matrix}" /></a> & <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{matrix}&space;-\ln(0.6)&space;&&space;-&space;&&space;\ln(0.2)&space;&&space;-&space;&&space;\ln(0.1)&space;&&space;-&space;&&space;\ln(0.7)&&space;=&space;&&space;4.8&space;\\&space;0.51&space;&&space;&&space;1.61&space;&&space;&&space;2.3&space;&&space;&&space;0.36&space;&&space;\end{matrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\begin{matrix}&space;-\ln(0.6)&space;&&space;-&space;&&space;\ln(0.2)&space;&&space;-&space;&&space;\ln(0.1)&space;&&space;-&space;&&space;\ln(0.7)&&space;=&space;&&space;4.8&space;\\&space;0.51&space;&&space;&&space;1.61&space;&&space;&&space;2.3&space;&&space;&&space;0.36&space;&&space;\end{matrix}" title="\begin{matrix} -\ln(0.6) & - & \ln(0.2) & - & \ln(0.1) & - & \ln(0.7)& = & 4.8 \\ 0.51 & & 1.61 & & 2.3 & & 0.36 & \end{matrix}" /></a>. When we had small cross entropy means that the model perform better.**
+
+<p align="center">
+    <img src="imgs/3_46.png" width=500>
+</p>
+
+**As Long as the point is misscalssified it will have a large error but the point which had correctly classified will have a small error which give us a small logarithm such as follows:**
+
+<p align="center">
+    <img src="imgs/3_47.png" width=500>
+</p>
+
+## 3.20 Cross Entropy 2
+
+<img src="imgs/3_48.png" align=right width=150>
+
+<br>
+
+**To get the Cross Entropy formula, we need to have some variables (P1 = 0.8, P2 = 0.7, P3 = 0.1) and y_i = 1 if present on box i**
+
+
+
+Formula :-
+---
+<p align=center>
+    <a href="https://www.codecogs.com/eqnedit.php?latex=-\sum_{i=1}^{m}&space;y_{i}\ln(p_{i})&space;&plus;&space;(1-y_{i})\ln(1-p_{i})" target="_blank"><img src="https://latex.codecogs.com/png.latex?-\sum_{i=1}^{m}&space;y_{i}\ln(p_{i})&space;&plus;&space;(1-y_{i})\ln(1-p_{i})" title="-\sum_{i=1}^{m} y_{i}\ln(p_{i}) + (1-y_{i})\ln(1-p_{i})" /></a>
+</p>
+
+```python
+import numpy as np
+
+# Write a function that takes as input two lists Y, P,
+# and returns the float corresponding to their cross-entropy.
+def cross_entropy(Y, P):
+    Y = np.float_(Y)
+    P = np.float_(P)
+    return -np.sum(Y*np.log(P)+(1-Y)*np.log(1-P))
+```
+
+```python
+Trying for Y=[1,0,1,1] and P=[0.4,0.6,0.1,0.5].
+The correct answer is
+4.8283137373
+And your code returned
+4.8283137373
+
+Correct!
+```
